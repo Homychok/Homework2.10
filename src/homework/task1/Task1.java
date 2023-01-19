@@ -44,7 +44,6 @@ public class Task1 {
 
         System.out.println(humanList);
         System.out.println("_____________");
-        humanList.stream().findFirst();
 //        System.out.println(findMinMax(humanList.stream().min(Human));    }
     }
 
