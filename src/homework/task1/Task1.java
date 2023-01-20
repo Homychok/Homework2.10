@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -17,7 +18,7 @@ public class Task1 {
         List<T> humanList = new ArrayList<>();
 //        T min = null;
 //        T max = null;
-        humanList = humanList.stream().sorted().collect(Collectors.toList());
+        humanList = humanList.stream().sorted((Comparator<? super T>) humanList).collect(Collectors.toList());
         if (humanList.size() != 0) {
             T min = humanList.stream().findFirst().get();
             T max = humanList.get(humanList.size() - 1);
